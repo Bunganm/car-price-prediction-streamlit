@@ -211,7 +211,14 @@ with col2:
             unsafe_allow_html=True
         )
 
-        st.markdown("### ✨ Detail Input")
+        st.markdown(
+            """
+            <h3 style='color:#C2185B;'>
+            ✨ Detail Input ✨
+            </h3>
+            """,
+            unsafe_allow_html=True
+        )
 
         st.write(f"Engine Size : {engine_size}")
         st.write(f"Horsepower : {horsepower}")
