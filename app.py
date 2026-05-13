@@ -26,14 +26,16 @@ st.markdown("""
     background-color: #FFEAF4;
 }
 
-/* Judul */
+/* Judul utama */
 .main-title {
     text-align: center;
     color: #C2185B;
     font-size: 50px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
+/* Subtitle */
 .subtitle {
     text-align: center;
     color: #AD1457;
@@ -41,7 +43,7 @@ st.markdown("""
     margin-bottom: 30px;
 }
 
-/* Card */
+/* Card box */
 .card {
     background-color: #FFFFFF;
     padding: 30px;
@@ -49,7 +51,7 @@ st.markdown("""
     box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Harga */
+/* Hasil harga */
 .price-box {
     background-color: #FFB6C1;
     padding: 35px;
@@ -131,7 +133,10 @@ with col1:
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    st.subheader("🚗 Input Spesifikasi Mobil")
+    st.markdown(
+        "<h2 style='color:#C2185B;'>🚗 Input Spesifikasi Mobil</h2>",
+        unsafe_allow_html=True
+    )
 
     engine_size = st.number_input('Engine Size', min_value=0.0, step=0.1)
     horsepower = st.number_input('Horsepower', min_value=0)
@@ -154,7 +159,10 @@ with col2:
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    st.subheader("💰 Hasil Prediksi Harga")
+    st.markdown(
+        "<h2 style='color:#C2185B;'>💰 Hasil Prediksi Harga</h2>",
+        unsafe_allow_html=True
+    )
 
     if predict_button:
 
@@ -201,7 +209,7 @@ st.markdown(
     <div class="footer">
         🌸 SISTEM INI DIBUAT OLEH 🌸 <br><br>
         NAMA : Bunga Nur Munawaroh <br>
-        NPM : 237006110
+        NPM  : 237006110
     </div>
     """,
     unsafe_allow_html=True
