@@ -40,15 +40,15 @@ st.markdown("""
     text-align: center;
     color: #AD1457;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-/* Card box */
-.card {
-    background-color: #FFFFFF;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+/* Section title */
+.section-title {
+    color: #C2185B;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Hasil harga */
@@ -72,7 +72,7 @@ st.markdown("""
     color: #880E4F;
     font-weight: bold;
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 /* Tombol */
@@ -151,10 +151,12 @@ col1, col2 = st.columns(2)
 # =========================
 with col1:
 
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-
     st.markdown(
-        "<h2 style='color:#C2185B;'>🚗 Input Spesifikasi Mobil</h2>",
+        """
+        <div class="section-title">
+            🚗 Input Spesifikasi Mobil
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
@@ -170,17 +172,17 @@ with col1:
 
     predict_button = st.button("💖 Prediksi Harga")
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # =========================
 # OUTPUT SECTION
 # =========================
 with col2:
 
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-
     st.markdown(
-        "<h2 style='color:#C2185B;'>💰 Hasil Prediksi Harga</h2>",
+        """
+        <div class="section-title">
+            💰 Hasil Prediksi Harga
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
@@ -219,8 +221,6 @@ with col2:
 
         st.info("Masukkan spesifikasi mobil lalu klik tombol prediksi.")
 
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # =========================
 # FOOTER
 # =========================
@@ -228,8 +228,7 @@ st.markdown(
     """
     <div class="footer">
         🌸 SISTEM INI DIBUAT OLEH 🌸 <br><br>
-        NAMA : Bunga Nur Munawaroh <br>
-        NPM : 237006110
+        flowiext <br>
     </div>
     """,
     unsafe_allow_html=True
