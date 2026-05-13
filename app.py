@@ -92,9 +92,29 @@ st.markdown("""
     color: white;
 }
 
-/* Input */
-.stNumberInput input {
+/* Label input */
+label {
+    color: #C2185B !important;
+    font-weight: bold !important;
+}
+
+/* Box input */
+.stNumberInput > div > div > input {
+    background-color: #FFD6E7 !important;
+    color: #880E4F !important;
     border-radius: 12px !important;
+    border: 2px solid #F48FB1 !important;
+}
+
+/* Tombol plus minus */
+button[kind="secondary"] {
+    background-color: #F8BBD0 !important;
+    color: #880E4F !important;
+}
+
+/* Text biasa */
+p {
+    color: #880E4F;
 }
 
 </style>
@@ -209,7 +229,7 @@ st.markdown(
     <div class="footer">
         🌸 SISTEM INI DIBUAT OLEH 🌸 <br><br>
         NAMA : Bunga Nur Munawaroh <br>
-        NPM  : 237006110
+        NPM : 237006110
     </div>
     """,
     unsafe_allow_html=True
